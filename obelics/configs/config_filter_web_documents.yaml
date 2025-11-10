@@ -1,0 +1,111 @@
+cond_check_format: False
+valid_formats: !!set {jpg, jpeg, png, webp}  # Unchanged; image formats are universal.
+cond_check_size_image: False
+original_width_min_cutoff: 150  # Unchanged; practical limits for usability.
+original_width_max_cutoff: 20_000  # Unchanged.
+original_height_min_cutoff: 150  # Unchanged.
+original_height_max_cutoff: 20_000  # Unchanged.
+rendered_width_min_cutoff: 150  # Unchanged.
+rendered_width_max_cutoff: 20_000  # Unchanged.
+rendered_height_min_cutoff: 150  # Unchanged.
+rendered_height_max_cutoff: 20_000  # Unchanged.
+aspect_ratio_max_cutoff: 2  # Arabic text layout typically uses standard aspect ratios.
+
+cond_remove_non_printing_characters: True  
+# Set to True to handle unique Arabic encoding issues and clean text.
+
+cond_standardize_whitespace: True  # Helps ensure proper alignment of Arabic text.
+cond_check_number_words_node_level: True
+number_words_node_level_min_cutoff: 3  
+# Arabic often uses shorter phrases; adjusted slightly lower.
+
+number_words_node_level_max_cutoff: None  # Unchanged; still realistic.
+cond_check_character_repetition_ratio_node_level: True
+character_repetition_length_node_level: 10
+# Arabic letters can elongate in scripts; slightly higher threshold.
+
+character_repetition_node_level_max_cutoff: 0.2 
+# Increased due to diacritics and certain repeated patterns in Arabic.
+
+cond_check_word_repetition_ratio_node_level: True
+word_repetition_length_node_level: 4  # Unchanged.
+word_repetition_node_level_max_cutoff: 0.25
+# Allow higher repetition since common Arabic phrases repeat words like "الله".
+
+cond_check_special_character_ratio_node_level: True
+special_character_ratio_node_level_max_cutoff: 0.25
+# Higher tolerance for Arabic-specific punctuation and diacritics.
+
+cond_check_stopword_ratio_node_level: False
+stopword_ratio_node_level_min_cutoff: 0.16  
+# Arabic has a high stopword usage; adjust accordingly.
+
+cond_check_flagged_word_ratio_node_level: True
+flagged_word_ratio_node_level_max_cutoff: 0.01  # Unchanged.
+
+cond_check_punctuation_ratio_node_level: False
+min_number_words_to_check_punctuation_ratio_node_level: 10  # Adjusted for brevity.
+punctuation_ratio_node_level_min_cutoff: 0.005  
+# Lower to handle varied Arabic punctuation.
+
+cond_check_common_word_ratio_node_level: False
+common_word_ratio_node_level_min_cutoff: 0.85  
+# Arabic common words may dominate; slightly lower.
+
+cond_check_lang_id_node_level: True  # Turned off; node-level Arabic detection is tricky.
+
+lang_id_node_level_min_cutoff: 0.5 # Unchanged.
+
+cond_check_perplexity_score_node_level: True  # Turned off; low accuracy for short Arabic segments.
+
+perplexity_score_node_level_max_cutoff: 2200  # Unchanged.
+
+cond_deduplicate_nodes_doc_level: True
+deduplication_max_cuttoff: 80
+
+
+cond_check_number_images: False
+number_images_min_cutoff: 1  # Unchanged.
+number_images_max_cutoff: None # Unchanged.
+
+
+cond_check_number_words_doc_level: True
+number_words_doc_level_min_cutoff: 8  
+# Arabic tends to use shorter texts; adjusted slightly lower.
+
+number_words_doc_level_max_cutoff: None  # Unchanged.
+
+cond_check_character_repetition_ratio_doc_level: False
+character_repetition_length_doc_level: 10  # Matches node-level adjustment.
+character_repetition_doc_level_max_cutoff: 0.25  # Matches node-level adjustment.
+
+cond_check_word_repetition_ratio_doc_level: False
+word_repetition_length_doc_level: 4  # Unchanged.
+word_repetition_doc_level_max_cutoff: 0.3
+# Increased for Arabic phrase repetition.
+
+cond_check_special_character_ratio_doc_level: True
+special_character_ratio_doc_level_max_cutoff: 0.23  
+# Adjusted slightly higher for Arabic punctuation and diacritics.
+
+cond_check_stopword_ratio_doc_level: False
+stopword_ratio_doc_level_min_cutoff: 0.45  
+# Arabic uses many stopwords like "في" and "من".
+
+cond_check_flagged_word_ratio_doc_level: True
+flagged_word_ratio_doc_level_max_cutoff: 0.01  # Unchanged.
+
+cond_check_punctuation_ratio_doc_level: False
+punctuation_ratio_doc_level_min_cutoff: 0.02  
+# Lowered slightly for Arabic punctuation diversity.
+
+cond_check_common_word_ratio_doc_level: False
+common_word_ratio_doc_level_min_cutoff: 0.85  
+# Adjusted for higher common word dominance.
+
+cond_check_lang_id_doc_level: True
+lang_id_doc_level_min_cutoff: 0.85  
+# Slightly higher to ensure Arabic identification in documents.
+
+cond_check_perplexity_score_doc_level: True
+perplexity_score_doc_level_max_cutoff: 1900  # Unchanged.
