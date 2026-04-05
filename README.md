@@ -4,7 +4,7 @@
 
 **Dataset Sample:** https://huggingface.co/datasets/Misraj/msdd
 
-**Paper:** Coming soon
+**Paper:** https://arxiv.org/abs/2511.07080
 
 
 ## Usage 
