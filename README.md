@@ -4,7 +4,7 @@
 
 **Dataset Sample:** https://huggingface.co/datasets/Misraj/msdd
 
-**Paper:** https://arxiv.org/abs/2511.07080
+**Paper:** coming soon
 
 
 ## Usage 
@@ -96,13 +96,5 @@ The script takes two arguments:
 
 If you are using this code, please cite
 ```
-@misc{hennara2025wasmpipelineconstructingstructured,
-      title={Wasm: A Pipeline for Constructing Structured Arabic Interleaved Multimodal Corpora}, 
-      author={Khalil Hennara and Ahmad Bastati and Muhammad Hreden and Mohamed Motasim Hamed and Zeina Aldallal and Sara Chrouf and Safwan AlModhayan},
-      year={2025},
-      eprint={2511.07080},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2511.07080}, 
-}
+
 ```
